@@ -8,13 +8,13 @@
     <main>
         <p>No ads. No hidden agendas. Just a free YouTube audio/video 
             downloader.</p>
-        <form action="{{ url_for("download") }}">
+        <form action="{{ url_for("download") }}" method="GET">
             <label for="url">Link:</label>
             <input type="url" name="url">
             <label for="format">Format</label>
-            <input type="radio" name="format" id="audio">
+            <input type="radio" name="format" id="audio" value="audio" checked>
             <label for="audio">Audio</label>
-            <input type="radio" name="format" id="video">
+            <input type="radio" name="format" id="video" value="video">
             <label for="video">Video</label>
             <input type="submit" value="Download">
         </form>
